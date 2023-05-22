@@ -1,0 +1,6 @@
+export * from './sleep'
+export * from './speedTime'
+export * from './saveScore'
+export * from './gameLogic'
+export * from './getScoreDate'
+export * from './setPersonLocalization'
