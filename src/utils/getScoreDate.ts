@@ -8,16 +8,15 @@ export function getScoreDate() {
   let hour = now.getHours()
   let minutes = now.getMinutes()
 
-  let stringMinutes = ''
-  let stringDay = ''
-  let stringMonth = ''
+  let stringDay = `${day}`
+  let stringMonth = `${month}`
+  let stringMinutes = `${minutes}`
 
-  if (minutes < 10) stringMinutes = `0${minutes}`
   if (day < 10) stringDay = `0${day}`
   if (month < 10) stringMonth = `0${month}`
+  if (minutes < 10) stringMinutes = `0${minutes}`
 
   let informations = `${stringDay}/${stringMonth}/${year} - ${hour}:${stringMinutes}`
 
   return informations
-
 }

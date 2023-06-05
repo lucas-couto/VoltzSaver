@@ -9,3 +9,9 @@ export const Content = styled.View`
   width: 100%;
 `
 
+export const Title = styled.Text`
+  font-size: 20px;
+  font-weight: bold;
+  align-self: center;
+`
+

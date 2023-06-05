@@ -5,7 +5,7 @@ export const Container = styled.SafeAreaView`
   width: 100%;
   position: absolute;
   background-color: #777;
-  z-index: 1000px;
+  z-index: 1px;
   opacity: 0.9;
 `;
 

@@ -7,11 +7,12 @@ export const Container = styled.SafeAreaView`
 export const Content = styled.View`
   flex: 1;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
 `
 
 export const Top = styled.View`
-  margin-bottom: 50px;
+  flex: 0.15;
+  justify-content: flex-end;
 `
 
 export const Title = styled.Text`
@@ -20,15 +21,22 @@ export const Title = styled.Text`
 `
 
 export const Body = styled.View`
-  flex: 0.15;
+  flex: 0.2;
   width: 100%;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: center;
+`
+
+export const Buttons = styled.View`
+  flex: 0.8;
+  width: 100%;
+  align-items: center;
+  justify-content: space-around;
 `
 
 export const GameButton = styled.Pressable`
   width: 60%;
-  height: 40px;
+  height: 30%;
   background-color: blue;
   color: #fff;
   align-items: center;
@@ -38,7 +46,7 @@ export const GameButton = styled.Pressable`
 
 export const HistoricButton = styled.Pressable`
   width: 60%;
-  height: 40px;
+  height: 30%;
   background-color: orange;
   color: #fff;
   align-items: center;

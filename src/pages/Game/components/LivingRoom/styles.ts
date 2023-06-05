@@ -13,14 +13,14 @@ export const Image = styled.ImageBackground`
 
 export const Lamp1 = styled.View`
   position: absolute;
-  top: -39;
-  left: 50;
+  top: -35px;
+  left: 10%;
 `
 
 export const Tv1 = styled.View`
   position: absolute;
-  top: 0;
-  left: 220;
+  top: 100%;
+  right: 10%;
 `
 
 

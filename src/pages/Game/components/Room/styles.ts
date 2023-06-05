@@ -1,7 +1,4 @@
-import { StyleSheet } from "react-native";
-
-
-import styled from 'styled-components/native';
+import styled from "styled-components/native";
 
 export const Container = styled.View`
   flex: 1;
@@ -15,13 +12,14 @@ export const Image = styled.ImageBackground`
 `;
 
 export const Lamp1 = styled.View`
+  width: 90%;
   position: absolute;
-  top: -39;
-  left: 170;
-`
+  top: -39px;
+  left: 40%;
+`;
 
 export const Computer1 = styled.View`
   position: absolute;
-  top: 80;
-  left: 15;
-`
+  top: 80px;
+  right: 5%;
+`;

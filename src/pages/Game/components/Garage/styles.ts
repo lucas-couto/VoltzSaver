@@ -8,23 +8,23 @@ export const Container = styled.View`
 
 export const Image = styled.ImageBackground`
   width: 100%;
-  height: 220px;
+  height: 100%;
 `;
 
 export const Lamp1 = styled.View`
-  position: absolute;
-  top: 0;
-  left: 100;
+  width: 100%;
+  top: 0%;
+  left: 20%;
 `
 
 export const Lamp2 = styled.View`
   position: absolute;
-  top: 0;
-  left: 220;
+  top: 0%;
+  right: 20%;
 `
 
 export const Fridge1 = styled.View`
   position: absolute;
-  top: 100;
-  left: 50;
+  top: 100%;
+  left: 10%;
 `

@@ -1,25 +1,25 @@
-import { Dispatch, SetStateAction, useContext } from 'react'
 import { Pressable } from 'react-native'
 
 import { ComputerOn } from './On'
 import { ComputerOff } from './Off'
 
 import { useGame } from '../../hooks/useGame'
+import { IEnergyItems } from '../../interface/EnergyItems'
 
-interface IComputer{
-  isLightOn: boolean
-  setIsLightsOn: Dispatch<SetStateAction<boolean>>
-}
 
-export function Computer({ isLightOn, setIsLightsOn }: IComputer) {
+export function Computer({ isLightOn, setIsLightsOn, isPersonHere }: IEnergyItems) {
 
   const { score, setScore } = useGame()
 
-  if (isLightOn) return (
-    <Pressable onPress={() => {
+  const disableEnergy = () => {
+    if (!isPersonHere) {
       setScore(score + 1)
       setIsLightsOn(false)
-    }}>
+    }
+  }
+
+  if (isLightOn) return (
+    <Pressable onPress={disableEnergy}>
       <ComputerOn />
     </Pressable>
   )

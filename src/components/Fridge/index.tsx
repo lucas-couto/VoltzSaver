@@ -1,25 +1,25 @@
-import { Dispatch, SetStateAction } from 'react'
 import { Pressable } from 'react-native'
 
 import { FridgeOn } from './On'
 import { FridgeOff } from './Off'
 
 import { useGame } from '../../hooks/useGame'
+import { IEnergyItems } from '../../interface/EnergyItems'
 
-interface IFridge{
-  isLightOn: boolean
-  setIsLightsOn: Dispatch<SetStateAction<boolean>>
-}
 
-export function Fridge({ isLightOn, setIsLightsOn }: IFridge) {
+export function Fridge({ isLightOn, setIsLightsOn, isPersonHere }: IEnergyItems) {
 
   const { score, setScore } = useGame()
 
-  if (isLightOn) return (
-    <Pressable onPress={() => {
+  const disableEnergy = () => {
+    if (!isPersonHere) {
       setScore(score + 1)
       setIsLightsOn(false)
-    }}>
+    }
+  }
+
+  if (isLightOn) return (
+    <Pressable onPress={disableEnergy}>
       <FridgeOn />
     </Pressable>
   )
