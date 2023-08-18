@@ -3,8 +3,8 @@ import { View } from "react-native";
 import Lottie from "lottie-react-native";
 
 import { Lamp } from "../../../../components/Lamp";
-import { Alert } from "../../../../components/Alert";
 import { Computer } from "../../../../components/Computer";
+import { AlertComponent } from "../../../../components/AlertComponent";
 
 import { useGame } from "../../../../hooks/useGame";
 
@@ -38,10 +38,10 @@ export function Room({ isPersonHere }: IRoom) {
 
   return (
     <Container>
-      <Alert showAlert={isRoomHasAlert} />
-      <Image
-        source={require("../../../../assets/images/roomBackground.jpg")}
-      >
+      <AlertComponent showAlert={isRoomHasAlert} />
+      <Image 
+      resizeMode="stretch"
+      source={require("../../../../assets/images/roomBackground.jpg")}>
         {isPersonHere ? (
           <Lottie
             source={require("../../../../assets/json/person.json")}

@@ -22,7 +22,7 @@
         "foregroundImage": "./src/assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
       },
-      "package": "com.lucas_couto.VoltzSaver"
+      "package": "com.uem.ic.VoltzSaver"
     },
     "web": {
       "favicon": "./src/assets/favicon.png"

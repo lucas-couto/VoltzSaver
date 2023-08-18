@@ -18,21 +18,21 @@ export const HowToPlay: React.FC = () => {
             <InformationTitle>Introdução</InformationTitle>
             <InformationContent>
               Watson é um menino que gosta de se divertir em varios lugares da casa,
-              porém ele não se atenta em desligar as luzes e os aparelhos eletrônicos quando sai do comodo.
+              porém ele não se atenta em desligar as luzes e os aparelhos eletrônicos quando sai do cômodo.
             </InformationContent>
           </Information>
           <Information>
             <InformationTitle>Objetivo</InformationTitle>
             <InformationContent>
               O objetivo desse jogo é evitar o consumo desnecessário de energia
-              nos comodos da casa, ou seja, quando as luzes e aparelhos estiverem ligados e ninguem
-              estiver no quarto.
+              nos cômodos da casa, ou seja, quando as luzes e aparelhos estiverem ligados e ninguem
+              estiver no cômodo.
             </InformationContent>
           </Information>
           <Information>
             <InformationTitle>Jogo</InformationTitle>
             <InformationContent>
-              1- Desligar as luzes e aparelhos dos comodos que estiverem sem ninguém.
+              1- Desligar as luzes e aparelhos dos cômodos que estiverem sem ninguém.
               {`\n`}
               2- A cada luz/aparelho desligado, você ganha 1 ponto.
               {`\n`}

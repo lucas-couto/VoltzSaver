@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Alert, Button, Pressable } from "react-native";
+import { Alert, Pressable } from "react-native";
 import { Audio } from 'expo-av';
 import { ArrowLeft } from "react-native-feather";
 import { useNavigation } from "@react-navigation/native";

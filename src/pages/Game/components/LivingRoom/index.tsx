@@ -4,7 +4,7 @@ import Lottie from "lottie-react-native";
 
 import { TV } from "../../../../components/TV";
 import { Lamp } from "../../../../components/Lamp";
-import { Alert } from "../../../../components/Alert";
+import { AlertComponent } from "../../../../components/AlertComponent";
 
 import { useGame } from "../../../../hooks/useGame";
 
@@ -23,7 +23,6 @@ export function LivingRoom({ isPersonHere }: ILivingRoom) {
 
   const [hasLightTV, setHasLightTV] = useState(isPersonHere);
   const [hasLightLamp, setHasLightLamp] = useState(isPersonHere);
-  const [hasLightLamp2, setHasLightLamp2] = useState(isPersonHere);
 
   useEffect(() => {
     if (isPersonHere) {
@@ -34,9 +33,9 @@ export function LivingRoom({ isPersonHere }: ILivingRoom) {
   }, [isPersonHere]);
 
   useEffect(() => {
-    if (!hasLightLamp && !hasLightLamp2 && !hasLightTV)
+    if (!hasLightLamp && !hasLightTV)
       setIsLivingRoomHasLight(false);
-  }, [hasLightLamp, hasLightLamp2, hasLightTV]);
+  }, [hasLightLamp, hasLightTV]);
 
   useEffect(() => {
     if (isLivingRoomHasAlert)
@@ -45,8 +44,9 @@ export function LivingRoom({ isPersonHere }: ILivingRoom) {
 
   return (
     <Container>
-      <Alert showAlert={isLivingRoomHasAlert} />
+      <AlertComponent showAlert={isLivingRoomHasAlert} />
       <Image
+        resizeMode="stretch"
         source={require("../../../../assets/images/livingRoomBackground.png")}
       >
         {isPersonHere ? (

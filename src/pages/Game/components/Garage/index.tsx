@@ -1,13 +1,15 @@
-import { useEffect, useState, Dispatch, SetStateAction } from "react";
+import { useEffect, useState } from "react";
 import { View } from "react-native";
+
 import Lottie from "lottie-react-native";
+
+import { useGame } from "../../../../hooks/useGame";
 
 import { Lamp } from "../../../../components/Lamp";
 import { Fridge } from "../../../../components/Fridge";
+import { AlertComponent } from "../../../../components/AlertComponent";
 
 import { Container, Image, Lamp1, Lamp2, Fridge1 } from "./styles";
-import { useGame } from "../../../../hooks/useGame";
-import { Alert } from "../../../../components/Alert";
 
 interface IGarage {
   isPersonHere: boolean;
@@ -41,8 +43,9 @@ export function Garage({ isPersonHere }: IGarage) {
 
   return (
     <Container>
-      <Alert showAlert={isGarageHasAlert} />
+      <AlertComponent showAlert={isGarageHasAlert} />
       <Image
+        resizeMode="stretch"
         source={require("../../../../assets/images/garageBackground.png")}
       >
         {isPersonHere ? (

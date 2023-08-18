@@ -1,4 +1,32 @@
-import styled from 'styled-components/native';
+import styled from "styled-components/native";
+import { Dimensions } from "react-native";
+import { chooseSVG } from "../../../../utils/chooseSVG";
+
+const width = Dimensions.get("window").width;
+const height = Dimensions.get("window").height;
+
+let topLamp = 10;
+let topFridge = 110;
+
+const size = chooseSVG(width, height);
+switch (size) {
+  case "Large":
+    topLamp = 10;
+    topFridge = 110;
+    break;
+  case "Medium":
+    topLamp = 7;
+    topFridge = 56;
+    break;
+  case "Small":
+    topLamp = 7;
+    topFridge = 56;
+    break;
+  default:
+    topLamp = 10;
+    topFridge = 110;
+    break;
+}
 
 export const Container = styled.View`
   flex: 1;
@@ -13,18 +41,18 @@ export const Image = styled.ImageBackground`
 
 export const Lamp1 = styled.View`
   width: 100%;
-  top: 0%;
+  top: ${topLamp}px;
   left: 20%;
-`
+`;
 
 export const Lamp2 = styled.View`
   position: absolute;
-  top: 0%;
+  top: ${topLamp}px;
   right: 20%;
-`
+`;
 
 export const Fridge1 = styled.View`
   position: absolute;
-  top: 100%;
+  top: ${topFridge}px;
   left: 10%;
-`
+`;

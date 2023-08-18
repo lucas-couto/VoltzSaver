@@ -1,5 +1,34 @@
 import styled from 'styled-components/native';
 
+import { Dimensions } from "react-native";
+import { chooseSVG } from "../../../../utils/chooseSVG";
+
+const width = Dimensions.get("window").width;
+const height = Dimensions.get("window").height;
+
+let topLamp = -39;
+let topTV = 20
+
+const size = chooseSVG(width, height);
+switch (size) {
+  case "Large":
+    topLamp = -39;
+    topTV = 20
+    break;
+  case "Medium":
+    topLamp = -27;
+    topTV = 49
+    break;
+  case "Small":
+    topLamp = -27;
+    topTV = 49
+    break;
+  default:
+    topLamp = -39;
+    topTV = 20
+    break;
+}
+
 export const Container = styled.View`
   flex: 1;
   align-items: center;
@@ -13,14 +42,14 @@ export const Image = styled.ImageBackground`
 
 export const Lamp1 = styled.View`
   position: absolute;
-  top: -35px;
+  top: ${topLamp}px;
   left: 10%;
 `
 
 export const Tv1 = styled.View`
   position: absolute;
-  top: 100%;
-  right: 10%;
+  top: ${topTV}px;
+  right: 8%;
 `
 
 
